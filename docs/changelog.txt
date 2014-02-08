@@ -1,0 +1,346 @@
+Future Enhancement
+. Need to add disallow certain bbcode
+. Need to add disable bbcode
+. some default css
+. use json more through out, later, how?
+. QA and test on mambo - work?, mia 4.6.5 SP1 only not 4.8 series done?, joomla 1 (ajax issue with bot)?, joomla 1.5 (some issue but fixed) done?
+. release these at the same time: mosmodule, mosprayerlatestx, plug\mosprayer.php, mosprayerbot
+. move gettoken to after render seem to fix j1.0 bot interfere issue
+
+Version 2.0.8
+  * Initial release of MosPrayer clone from MosPrayer version 2.0.7
+
+version 2.0.7
+  * Minor fix in latestx to remove "notarget"
+  * Minor bug fix on reguser issue
+
+version 1.5.9-2.0.6
+  * Enhance security token processing to ensure no double comment
+  * Updated Swedish translation from Stefan Lewitas
+  * Total rewrite using MVC pattern with view are just plain html so can easily customize
+  * model are generate schema on the fly and automatic upgrade detection
+  * Add IP of commenter
+  * merge MosPrayer Ajax server code into front controller
+  * add MosModule integration support so you can use any of MosModule command in MosPrayer comment
+  * upgrade jQuery 1.3.2
+  * Quick post using ajax with spinning wheel
+  * Create wrapper around jQuery for ease of ajax development
+  * css and js are now load in the head whereever is possible
+  * Has better support for SEF enable site
+  * Detection for auto upgrade of MosPrayer related tables
+  * unify API call with a setup of class for helper, utility, etc, entire MosPrayer API is hang off one global variable
+  * parameter to use username or name per popular request
+  * change from this-> to self:: in base class
+  * parameter to close comment based on contents list
+  * parameter to set sectoken (turn on/off invisible captcha)
+  * add Itemid on link to work around repeated top header after redirect in J1.5
+  * fix upg msg when comment table is empty in admin.php
+  * Tested for Mambo, MiaCMS, Joomla 1.0 (ajax only work when edit template not via plugin), Joomla 1.5+
+  * saveedit config fix for Mia compatibility
+  * fix to adapt CB plugin to work better with MosPrayer 2.0+ new feature
+  * last minute QA
+  * minor touch up on docs to fit better on Wiki site.
+  * Minor fix on ('mosGetParam')
+  
+Version 1.5.7-1.5.8
+  * load css in header to get XHTML validation
+  * make compatible with Joomla 1.0.15, 1.5.8, Mambo and MiaCMS
+  * Upgrade to jQuery 1.3
+  * Enhance to work better with SEF enable
+
+Version 1.5.4 - 1.5.6
+. Upgrade to use jQuery 1.2.6 min
+. Fix to support SEO in MiaCMS and perhaps Mambo too!
+. Work around emailcloak issue
+
+
+Version 1.2.2 - 1.5.1,1.5.2,1.5.3
+. Updated polish.php
+. Lot of rewrite
+. Add _PRY_R_CHECKLINK in translation per request
+. Increase per_page to varchar(3)
+. If lang is unknow, default to english
+. Upgrade to use jQuery 1.2.3 pack
+. Add tabs using ui.tabs.pack.js
+. Remove lot of old js
+. Ajaxified many area in frontend and backend
+. code around Joomla 1.5.1 quirk!
+. Minor fix on comment form to fit better for some template
+
+Version 1.1.1 - 1.1.8, 1.1.9, 1.2.0, 1.2.1, 1.2.2
+. Updated dutch.php
+. Updated brazilian_portuguese.php
+. Better position of comment link and better detect J15 none frontpage URL
+. Only show comment header when there is something to show
+. Updated polish.php
+. Fix possbile issue with some mysql version with insert
+. Fix to show comment on com_mamblog
+. Enhance to work with Joomla 1.5.1 SEO enable
+. Add code to work around some double post issue with Joomla 1.0.15 when preview is on
+. Some minor bug fix
+
+Version 1.1b,c,d,e,f,g
+. Minor bug fix on path, and diff_array include
+. Add czech.php
+. php 4 compatibility issue patch
+. Minor fix on missing '
+. Add updated polish.php
+. Change to work for sites that has cluster servers in the backend.
+
+Version 0.8.5 - 0.9 - 1.1
+. Further streamline, integrate MosPrayerBot and MosPrayer
+. Add to show comment link in blogcategory and blogsection
+. Add feature to only show comment form when "add comment" is clicked
+. Add ajax using JQuery to check form for good token to prevent bad comment
+. Add 3 mail handler options mosmail, phpmailer and phpmail (default if all fail)
+. Secure MosPrayer server only server from the local application
+. Eliminate config file, use config from db
+. Better db cfg upgrade handling
+. Fix for Mambo and Joomla compatibility!
+
+
+Version 0.8.4
+. Enhance and no longer require to edit template
+. Option to turn off comment link on frontpage
+
+Version 0.8.3c,d,e,f
+. Exclude category since id is for catid not cid
+. Fix not show comment but for none login user
+. Exclude category, blogsection, blogcategory
+. Minor fix on miss variable in the backend
+
+Version 0.8.3,a,b
+. Use sf.net for mailling
+. Fix desc to be compatible with Mambo 4.6.2
+. Completely integrate MosPrayerBot with MosPrayer so edting template is now optional but still supported
+. Enhance comment form to let MosPrayerBot override MosPrayer in template
+. Auto publish for superadmin
+. Add MosPrayer default css
+. Little bug fix and make sure it still work with older version of Mambo and Joomla
+
+Version 0.8.2t,u,v,w,x
+. in amdin.mosprayer.php missing cid declaration cause warning in the backend
+. add feature to support mosprayerlatestx module
+. Fix to run in global emulation off
+. Fix MosPrayer show in Joomla user module
+. Add readme.txt per user feedback
+
+Version 0.8.2,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s
+. add css code to align comment form label
+. remove the use of act and use only task
+. Fix quote in data to prevent editing problem can not have more than 370 in comment
+. Code on the backend to allow html in mosGetParam...,x00002 when edit, bb2html to store as html rather than bbcode
+. Add support to any component that use content w/ a valid id for example: like mamblog
+. Add Ron's wishlist
+1. Move "(required)" to after the form box on Name & Email and give it's own CSS class.
+2. Use target="_blank" on MosPrayer link
+3. Fix English language file (there are grammatical errors)
+4. Line up the top 3 form boxes
+5. Add "(optional)" after home page form box
+6. Javascript BBcode insertion with a rollover tooltip for those with Javascript enabled. If you think that too many people will have Javascript turned off, then add an option in the config so that people can turn it on if they want (I would!).
+7. Move the word "supported" inside the BBcode brackets.
+. Add css for mosprayer link
+. Fix config bug not to preserve setting of 0 from db
+. Rewrite to enable MosPrayerBot to show comment form and now install in template is optional
+. emailcloak bot must be before MosPrayerBot when turn on comment form in MosPrayerBot
+. Fix hide comment bug and optimize code in MosPrayerBot
+. Add 3 more css for the header article
+. Final touch up before release
+
+Version 0.8.1a,...,x
+. Fix bug bbcode not show when use CCS to show comment form
+. Add feature to save config to db table
+. Changes and add some more new CSS code
+. add sync config between config file and db
+. major rewrite to do away with config hardcode
+. add array_diff_key.php to php 4 compatible
+. add css class to button
+. minor change in css instruction and better fit
+. change mccfg_ back to mc_ for compatible with mosprayerbot
+. fix bug only save config when click save config, otherwise only load
+
+Version 0.8c,...,n
+. add Vladimir Prieto tweak to jump to article from frontpage when use with MosPrayerBot
+. Fix to work with J1.5 beta in legacy mode
+. Add !defined('_DATE_FORMAT_LC') to work in J1.5
+. Add code sample to the new J1.5 template
+. Fix act to deal with depreciated in J1.5
+. Add feature to overwrite frontpage for the tweak above to work
+. revert out Vladimir, mcform work better
+. Updated turkish.php
+. Fix comment paging bug
+. Try to fix missing comment in paging
+. Add _PRY_R_HOMEURL to site owner set their text to show commenter URL
+
+Version 0.7.2a,b,0.8,a,b
+. Fix email optional text bug and various bug that cause warning when turn of maximum error setting in PHP
+. Fix more warning bug
+. Add feature to apply time offset from configuration when show comment
+. Add exclude content list to MosPrayer and MosPrayerBot
+. update spanish
+. fix hardcode comments heading
+
+Version 0.7.2
+. Add turkish.php
+. Mnor enhancement to run in global emulation off
+. Rename esp to spanish
+
+Version 0.7.1,a,b,c,d,e,f,g,h,i,j,k,l,m,n
+. Add feature in config to set to use css or table when show comments and form
+. Add bbcode support in textarea, it works and aboutbbcode.php
+. fix preview, add comment bug
+. fix showline validation error.
+. change mosprayertexteven mosprayereven and odd respectively to implement finner skin down to text and meta level
+. Need to check out the order by issue, it works
+. Fix comment editing feature to run in Mambo 4.6
+. Fix undefine output,sql,etc variable bug
+. Fix little minor formating issue and set default to http://
+. Need to check size and language load in about.php
+. create a wrapper function for backward compatible with MosPrayerBot
+. Add code to prevent direct execution
+. Fix NOT_AUTH extra space in dutch.php
+. add email to bbcode, need to test this
+
+Version 0.7a,b,c,d,e
+. ReWrite to work with MosPrayerBot
+. Fix double br to p tag
+. Redo a few CSS changes per user suggestion
+. Work well with php 5.1+ and mysql 5.1+
+. Fix double p and preview redirect back to the same page
+. Refix the edit comment bug
+. Fix comment hide bug to none register users
+. Fix default to en for english in Mambo 4.6
+. rename duf.php to dutch.php
+
+Version 0.6e,f,g,h,i
+. Fix enter "fully" logic bug?, cleaner attempt!, 3rd?
+. add get $id in case global emulation off
+. Trouble shoot double comment problem at @oscms
+
+Version 0.6d
+. Add to show "whose.." text for Kofi to show country
+
+Version 0.6c
+. Fix email optional but get "enter fully" popup.
+
+Version 0.6b
+. Fix for Mambo 4.6PreRC1
+
+Version 0.6a
+. Fix bug on editing comment.
+
+Version 0.6
+. Make compatible to w/ 4.6
+. Add Prayers Sorting: New entries first or New entries last
+. Form Position: Behind comments or Above Prayers
+. Remove ads
+. add croatian.php translation file
+
+Version 0.5.9.9i
+. Add nl2br when listcomment, homepage bug
+
+Version 0.5.9.9h
+. Major cleanup and make it compatible with php5.1
+. Add date column in admin area when list comment
+. Adding editing comment feature
+. paramter to set item of comment/page
+. More bug fixes
+. Add title on comment heading per customer request
+. Change "cancel" to button
+. Add comment title suffix
+. Change the validation msg to popup
+. Fix missing Itemid when got redirected and got "not authorize" message
+. Added Swedish.php
+. Rename to a corrent name for Rusian.php
+
+Version 0.5.9.8c
+. check for whether real_escape is there
+. add smart_quote to handle extra slashes
+. Fix bug on comment form show up on other component
+. Add ability to skin comment by using css in template, see post-install intruction for sample code
+. Add comments heading using componentheading class
+. Compatible with php5 and mysqli
+
+Version 0.5.9.7
+. Restructing all language to be consistent
+. get an update Italian.php 
+. More cleanup
+. fix missing div and minor bug fixes
+. Send popup after preview message submitted
+. add filter sql injection for php 4.2 or php 4.3+
+. Add exclude section list eg: 0 for static content
+
+Version 0.5.9.5
+. Remove match localhost due to some people get "Undefined offset: 0"
+. Polish tranlsation file
+. Italian translation file
+. More bug fixes
+. Enhance comment form to fit better in SolarFlareII template
+. Enhance paging of comments
+
+Version 0.5.9.3
+. Add email to be optional
+. Lot more cleanup
+. Change to radio button to make room in configuration screen
+. Convert mos_ to #__
+. Some more bug fixes
+
+Version 0.5.8.5h,i,j
+. remove email notification
+. Try different way to filter spammer
+. Change to Yahoo ads.
+. Lot of cleanup and no more warning
+
+Version 0.5.8.5g
+. add missing </div>
+. add filter sql injection
+. filter spamer
+
+Version 0.5.8.5d
+. Add arabic_lang.php
+. Patch to run in Joomla 1.0
+. Use "smalltext" to fix align anormally when display in planetfall template.
+. Undefine error on id when install SMF bridge, why?
+
+Version: 0.5.8.5 
+. Add suggestion from Gabor on using phpInputFilter 
+. Use mosFormateDate
+. exclude E_NOTICE to better handle error
+. fix send mail error
+. more refactor code
+. add paging of comment
+. add credit to about.php for 2 German translation files
+. miss german_lang.php in previous release.
+
+Version: 0.5.8.3a Add German and De translation and more rewrite, bug fix
+
+version: 0.5.8.2f Add French translation and more rewrite
+
+Version: 0.5.8.1 Add hide URL and more rewrite into admin.mosprayer.class.php
+
+Version: 0.5.7a Use admin email for the "From:" when send notification email, fix bug when hide comment.
+
+Version: 0.5.7 Add Bras Cool credit, allow anyone to see comment but must be login to leave comment
+
+Version: 0.5.6a,b Add config setting to disable Google Adsense
+
+Version: 0.5.6 Add brazilian_portuguese_lang.php, fix a bug on not able to save config
+
+Version: 0.5.5a Minor fix on the default value
+
+Version: 0.5.5 Almost complete rewrite on all files
+. Add admin.mosprayer.class.php, comments.class.php, common.php
+
+Version 0.5.4 Start from 0.5.2.1 code base again!
+. admin.mosprayer.php: Error in view comment when no record
+. dhtml.js, common.php, russia_lang.php: new files
+. about.php: fix bugs
+. mosprayer.xml: add new files
+
+version 0.5.3 Lot of rewrite but abandon!
+
+version 0.5.2.2a Add Russia language file and bug fixes
+
+Version 0.5.2.2 Quick fix but introduce some bugs
+
+Version 0.5.2.1 Change Combo 0.5.2 to Moscom 0.5.2.1

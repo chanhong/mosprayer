@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<mosinstall type="component">
+	<name>MOSPRAYER</name>
+	<creationDate>5/02/2010</creationDate>
+	<author>Chanh Ong</author>
+	<copyright>This component is released under the GNU/GPL License</copyright>
+	<authorEmail>ongetc@gmail.com</authorEmail>
+	<authorUrl>OngETC.com</authorUrl>
+	<version>2.0.8</version>
+	<description><![CDATA[
+Prayers on Content (IMPORTANT! Go to config to perform a save to preserve your preference in db and Please view Post Install Configuration)<br/>See readme.txt for more detail<p /><a href="https://www.paypal.com/xclick/business=chanh.ong@gmail.com&item_name=Donation+for+MosPrayer&no_shipping=1&tax=0&currency_code=USD" target="_blank">
+<img src="https://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif" alt="Pay with PayPal - It's fast, free and save!" border="0"></a>
+]]>
+	</description>
+	<files>
+		<filename>mosprayer.php</filename>
+	</files>
+	<install>
+      <queries>
+      <query>CREATE TABLE IF NOT EXISTS `#__content_mosprayer_config` (
+   `id` int(10) unsigned zerofill NOT NULL auto_increment,
+  `admin_email` varchar(63) NOT NULL default 'changeme@mail.com',
+  `excl_sec` varchar(63) NOT NULL default '0',
+  `excl_contents` varchar(63) NOT NULL default '0',
+  `per_page` varchar(2) NOT NULL default '15',
+  `donated` varchar(1) NOT NULL default '0',
+  `email_alerts` varchar(1)  NOT NULL default '1',
+  `email_alerts_user` varchar(1) NOT NULL default '0',
+  `review` varchar(1) NOT NULL default '1',
+  `regonly` varchar(1) NOT NULL default '1',
+  `updates` varchar(1) NOT NULL default '0',
+  `force_preview` varchar(1) NOT NULL default '1',
+  `hide_comments` varchar(1) NOT NULL default '0',
+  `hide_url` varchar(1) NOT NULL default '0',
+  `email_req` varchar(1) NOT NULL default '1',
+  `new_1st` varchar(1) NOT NULL default '1',
+  `form_above` varchar(1) NOT NULL default '0',
+  `use_divcss` varchar(1) NOT NULL default '1',
+  `use_username` varchar(1) NOT NULL default '0',  
+   KEY `id` (`id`)
+) TYPE=MyISAM
+    </query>
+      <query>CREATE TABLE IF NOT EXISTS `#__content_mosprayer_requests` (
+  `articleid` int(11) NOT NULL default 0,
+  `id` int(10) unsigned zerofill NOT NULL auto_increment,
+  `entry` text NOT NULL,
+  `name` text NOT NULL,
+  `email` varchar(63) NOT NULL default '',
+  `homepage` varchar(63) NOT NULL default '',
+  `date` varchar(20) NOT NULL default '',
+  `time` varchar(5) NOT NULL default '',
+  `published` char(1) NOT NULL default '0',
+  `ip` char(15) NOT NULL default '',
+  KEY `id` (`id`)
+) TYPE=MyISAM
+    </query>
+  </queries>
+	</install>
+	<administration>
+	<files>
+    <filename>controller/admin.php</filename>
+    <filename>controller/front.php</filename>
+    <filename>css/mosprayer.css</filename>
+    <filename>css/mosprayer.ui.tabs.css</filename>
+    <filename>docs/changelog.txt</filename>
+    <filename>docs/readme.txt</filename>
+    <filename>docs/credit.txt</filename>
+    <filename>js/mosprayer.js</filename>
+    <filename>js/mosprayer.jquery.js</filename>
+    <filename>js/mosprayer.ui.tabs.js</filename>
+    <filename>language/arabic.php</filename> 
+    <filename>language/brazilian_portuguese.php</filename>
+    <filename>language/croatian.php</filename> 
+    <filename>language/czech.php</filename>
+    <filename>language/de.php</filename>
+    <filename>language/dutch.php</filename>
+    <filename>language/english.php</filename>
+    <filename>language/french.php</filename>
+    <filename>language/german.php</filename>    
+    <filename>language/italian.php</filename> 
+    <filename>language/polish.php</filename> 
+    <filename>language/russia.php</filename>
+    <filename>language/spanish.php</filename>
+    <filename>language/swedish.php</filename> 
+    <filename>language/turkish.php</filename>
+    <filename>model/prayer.php</filename>
+    <filename>model/config.php</filename>
+    <filename>model/mosprayer.php</filename>
+    <filename>view/_preview.php</filename>
+    <filename>view/_submit.button.php</filename>    
+    <filename>view/admin.editprayer.php</filename>
+    <filename>view/admin.main.php</filename>
+    <filename>view/admin.showconfig.php</filename>
+    <filename>view/prayer.main.php</filename>
+    <filename>view/prayerform.div.php</filename>
+    <filename>view/prayerform.table.php</filename>
+    <filename>view/preview.div.php</filename>
+    <filename>view/preview.table.php</filename>
+    <filename>admin.mosprayer.php</filename>
+    <filename>array_diff_key.php</filename>
+    <filename>co.base.class.php</filename>
+    <filename>co.html.class.php</filename>
+    <filename>co.jquery.class.php</filename>    
+    <filename>co.utils.class.php</filename>
+    <filename>json.php</filename> 
+    <filename>license.php</filename>
+    <filename>mosprayer.base.class.php</filename>
+    <filename>mosprayer.html.class.php</filename>
+    <filename>mosprayer.jquery.class.php</filename>     
+    <filename>mosprayer.main.class.php</filename>
+    <filename>mosprayer.utils.class.php</filename>
+    <filename>mosprayer.version.php</filename>
+    <filename>toolbar.mosprayer.html.php</filename>
+    <filename>toolbar.mosprayer.php</filename>
+  </files>
+  <images>
+    <filename>css/tab.png</filename>
+    <filename>css/loading.gif</filename>
+  </images>
+  <menu>MosPrayer</menu>  
+	</administration>
+</mosinstall>

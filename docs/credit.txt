@@ -1,0 +1,25 @@
+Name|Credit to their contribution
+--------------------------	---------------------------------------------------
+Jan de Graaff|For integrating language support & dutch Lang file
+Pavel|For russia.php
+Bras Cool|For brazilian_portuguese.php 
+Kevin Cain|For french.php 
+Maik Holtkamp|For de.php
+Jiri Ripa & Dominik Schub|For german.php
+Fuga|For arabic.php|http://dndon.net
+Gabor|For suggestion on using phpInputFilter
+Lukasz Kujawa|For polish.php
+Michele Longhini|For Italian.php
+Hans@Rudolf.nu|For Swedish.php
+humanitas@post.t-com.hr|For croatian.php
+Pariah S. Burke|For CSS ideas & code|http://www.iampariah.com
+Murat Esgin|For Turkish.php|http://www.lavinya.net
+Vladimir Prieto|For little tweak to show the right article when use with bot
+Ron Severdia|For CSS code suggestion
+masterkeedu|For mail notification bug
+John Resig|JQuery|http://jquery.com
+emil@mambodrom.cz|For czech.php
+porzeraczmuzguw|For updated polish.php
+Frank de Kort|For updated dutch.php
+Armando Faria|For updated brazilian_portuguese.php
+Stefan Lewitas|for updated Swedish translation
